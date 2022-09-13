@@ -7,7 +7,8 @@
     "start": "webpack-dev-server --open --mode development",
     "start-prod": "node app.js",
     "test": "jest",
-    "eslint": "eslint './**/*.{js,jsx}'",
+    "eslint": "eslint --fix './**/*.{js,jsx}'",
+    "prod": "webpack-dev-server --open --mode production",
     "build": "webpack --mode production"
   },
   "repository": {
@@ -50,5 +51,9 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0"
-  }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ]
 }
